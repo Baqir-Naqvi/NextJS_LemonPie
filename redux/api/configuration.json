@@ -1,0 +1,26 @@
+{
+  "env": "production",
+  "endPoints": {
+    "development": {
+      "host": "chs-contratti-d-api-westeu-001.azurewebsites.net",
+      "port": "",
+      "protocol": "https",
+      "prefix": "api",
+      "version": "1"
+    },
+    "test": {
+      "host": "chs-contratti-t-api-westeu-001.azurewebsites.net",
+      "port": "",
+      "protocol": "https",
+      "prefix": "api",
+      "version": "1"
+    },
+    "production": {
+      "host": "chs-contratti-p-api-westeu-001.azurewebsites.net",
+      "port": "",
+      "protocol": "https",
+      "prefix": "api",
+      "version": "1"
+    }
+  }
+}
