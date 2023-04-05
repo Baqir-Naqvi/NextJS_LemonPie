@@ -61,22 +61,23 @@ const HeaterCardWithSkeleton = WithSkeleton(HeaterCard)
 const AirConditionerCardWithSkeleton = WithSkeleton(AirConditionerCard)
 
 export default function Home() {
-  //Login funnel user
-  const { isError, isLoading } = useLoginQuery(undefined)
-
   return (
     <IndexStyle>
       <Head>
         <title>Comfort Home Solutions - Sottoscrizione contratti</title>
       </Head>
       <Container>
-        <ShowOnCondition showWhen={!isError}>
-          <div className="cards-container">
-            <HeaterCardWithSkeleton otherClasses={["loading-card"]} isLoading={isLoading} />
-            <AirConditionerCardWithSkeleton otherClasses={["loading-card"]} isLoading={isLoading} />
-          </div>
-        </ShowOnCondition>
+        <div className="cards-container">
+          <HeaterCardWithSkeleton
+            otherClasses={["loading-card"]}
+            isLoading={false}
+          />
+          <AirConditionerCardWithSkeleton
+            otherClasses={["loading-card"]}
+            isLoading={false}
+          />
+        </div>
       </Container>
     </IndexStyle>
-  )
+  );
 }
